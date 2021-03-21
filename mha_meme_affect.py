@@ -102,7 +102,6 @@ words = pickle.load(open(f'glove/glove.wiki_words_200d.pkl', 'rb'))
 word2idx = pickle.load(open(f'glove/glove.wiki_idx_200d.pkl', 'rb'))
  
 glove = {w: vectors[word2idx[w]] for w in words}
-#print(glove['before'])
 
 #### Model without the last LSTM ####
 
@@ -135,8 +134,6 @@ atmf_dense_4 = 1
 traindata = pd.read_csv('dataset/train_splitted_all_tasks.csv', header=None).to_numpy() 
 testdata = pd.read_csv('dataset/test_splitted_all_tasks.csv', header=None).to_numpy() 
 
-print(traindata.shape)
-print(testdata.shape)
 
 x=traindata[:, 0: no_of_splits+1]
 
@@ -192,19 +189,11 @@ for idx in range(len(ytest)):
     ytest_sarcasm.append(int(ytest[idx][1]))
     ytest_offensive.append(int(ytest[idx][2]))
     ytest_motivational.append(int(ytest[idx][3]))
-    
-
-print(ytest_humour[0:20])
-print(ytest_sarcasm[0:20])
-print(ytest_offensive[0:20])
-print(ytest_motivational[0:20])
 
 
 
 train_images = x[:,0]
 test_images= xtest[:,0]
-
-print('-----------------------------------------')
 
 
 #convert the entire text in lowercase
@@ -226,22 +215,12 @@ for idx in range(1, 1 + no_of_splits):
     xtest[:, idx] = [scrub_words(element) if isinstance(element, str) else element for element in xtest[:, idx]]
 
 
-
-
-# examples of what is in the vocab
-print(f'Length of Input Vocabulary: {len(inputs.vocab)}') 
-print('------------------------------------------------------------')
-
 # vectorize to tensor
 input_tensor = []
 for idx in range(len(x)):
     input_tensor_sample = [[inputs.word2idx.get(s) for s in str(es).split(' ')]  for es in x[idx,1:]]
     input_tensor.append(input_tensor_sample)
 
-
-print(x[0])
-print(input_tensor[0])  #This line prints some sentences represented as tensors
-print('------------------------------------------------------------')
 
 input_tensor_test = []
 for idx in range(len(xtest)):

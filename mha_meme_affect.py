@@ -22,6 +22,8 @@ from torch.nn import functional as F
 from torch.autograd import Variable
 import bcolz
 import pickle
+import warnings
+warnings.filterwarnings("ignore")
 from PIL import Image
 import scipy
 from scipy.sparse.csgraph import minimum_spanning_tree

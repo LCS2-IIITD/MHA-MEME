@@ -264,11 +264,6 @@ for idx in range(len(input_tensor_test)):
     input_tensor_test_pad.append(xsampletest)
 
 
-print(len(input_tensor_test_pad))
-print('--------------------------------------')
-
-
-
 #### Define the custom dataset
 class MemoDataset(Dataset):
 
@@ -329,11 +324,6 @@ for i, word in enumerate(inputs.vocab):
         words_found += 1
     except KeyError:
         weights_matrix[i] = np.random.normal(scale=0.6, size=(embedding_dim, ))
-
-print('---------------------------')
-print(f'Number of Word Embeddings replaced by Pre-Trained Glove: {words_found}')
-print('---------------------------')    
-
 
 
 class VGG19Bottom(nn.Module):

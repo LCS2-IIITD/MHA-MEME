@@ -21,6 +21,8 @@ from torch.nn import functional as F
 from torch.autograd import Variable
 import bcolz
 import pickle
+import warnings
+warnings.filterwarnings("ignore")
 from PIL import Image
 import scipy
 from scipy.sparse.csgraph import minimum_spanning_tree
@@ -593,5 +595,3 @@ for epoch in range(epochs):
         print(confusion_matrix(target_inter, predicted_inter))   
         print(f'Best Macro F1 on test set till this epoch: {max(epoch_wise_macro_f1)} Found in Epoch No: {epoch_wise_macro_f1.index(max(epoch_wise_macro_f1))+1}')
     
-               
-

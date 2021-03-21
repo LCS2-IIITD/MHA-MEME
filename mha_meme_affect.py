@@ -820,10 +820,5 @@ for epoch in range(epochs):
         
         print(f'Best Macro F1 on test set till this epoch: {max(epoch_wise_average_macro_f1)} Found in Epoch No: {epoch_wise_average_macro_f1.index(max(epoch_wise_average_macro_f1))+1}')
     
-        if(current_macro_average == max(epoch_wise_average_macro_f1)):
-            torch.save({
-                    'MemoLSTM_state_dict': model.state_dict(),
-                    'LSTMClassifier_state_dict': classifier.state_dict(),
-                    'optimizer_state_dict': optimizer.state_dict()
-                    }, '/home/shramanp/emotion_analysis/memolstm_model_task_b.tar')        
+           
 

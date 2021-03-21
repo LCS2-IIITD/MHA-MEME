@@ -98,9 +98,6 @@ inputs = ConstructVocab(np.concatenate((x[:,1], xtest[:,1]), axis=0))
 
 
 
-
-# In[3]:
-
 #### Initializing GLOVE weights ####
 
 vectors = bcolz.open(f'glove/glove.wiki200d.dat')[:] 
@@ -156,20 +153,12 @@ train_images = x[:,0]
 test_images= xtest[:,0]
 
 
-print(x.shape)
-print(y.shape)
-print('-----------------------------------------')
-
 labelencode = LabelEncoder()
 ylabel = labelencode.fit_transform(y.astype(str))
 target_tensor = (ylabel.tolist())
 
 ylabeltest = labelencode.fit_transform(ytest.astype(str))
 target_tensor_test = (ylabeltest.tolist())
-
-print(target_tensor[100:105])
-print(target_tensor_test[100:105])
-print('-----------------------------------------')
 
 
 
@@ -192,15 +181,6 @@ for idx in range(1, 1 + no_of_splits):
     xtest[:, idx] = [scrub_words(element) if isinstance(element, str) else element for element in xtest[:, idx]]
 
 
-print(x.shape)
-print(xtest.shape)
-
-print('-----------------------------------------')  
-
-
-# examples of what is in the vocab
-print(f'Length of Input Vocabulary: {len(inputs.vocab)}') 
-print('------------------------------------------------------------')
 
 # vectorize to tensor
 input_tensor = []
@@ -208,10 +188,6 @@ for idx in range(len(x)):
     input_tensor_sample = [[inputs.word2idx.get(s) for s in str(es).split(' ')]  for es in x[idx,1:]]
     input_tensor.append(input_tensor_sample)
 
-
-print(x[0])
-print(input_tensor[0])  #This line prints some sentences represented as tensors
-print('------------------------------------------------------------')
 
 input_tensor_test = []
 for idx in range(len(xtest)):
@@ -252,9 +228,6 @@ for idx in range(len(input_tensor_test)):
     xsampletest = [pad_sequences(x, max_len) for x in input_tensor_test[idx]]
     input_tensor_test_pad.append(xsampletest)
 
-
-print(len(input_tensor_test_pad))
-print('--------------------------------------')
 
 
 #### Define the custom dataset
@@ -311,9 +284,6 @@ for i, word in enumerate(inputs.vocab):
     except KeyError:
         weights_matrix[i] = np.random.normal(scale=0.6, size=(embedding_dim, ))
 
-print('---------------------------')
-print(f'Number of Word Embeddings replaced by Pre-Trained Glove: {words_found}')
-print('---------------------------')    
 
 class VGG19Bottom(nn.Module):
     def __init__(self, original_model):

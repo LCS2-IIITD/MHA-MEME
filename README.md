@@ -19,3 +19,14 @@ textual segment t<sub>i</sub> separately by establishing their correspondence wi
 
 <p align="center"><img src="Images/avengers_new-avenger-endgame-funny-memes-13.jpg"></p>
 
+# Citation
+Please cite the following paper if you find this segmented dataset and MHA-Meme architecture useful in your research:
+
+# Run the code
+
+1. Clone the repository 
+
+
+```bash
+git clone 
+```

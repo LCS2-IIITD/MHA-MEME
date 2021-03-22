@@ -35,7 +35,7 @@ You will need python >= 3.6. Start by creating a virtual environment to run the 
 
 ```bash
 python3 -m venv env
-source venv/bin/activate
+source env/bin/activate
 ```
 
 Install all the requirements in the virtual environment:

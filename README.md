@@ -24,8 +24,7 @@ Please cite the following paper if you find this segmented dataset and MHA-Meme 
 
 # Run the code
 
-1. Clone the repository 
-
+Clone the repository 
 
 ```bash
 git clone 

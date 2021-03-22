@@ -45,8 +45,14 @@ pip install --upgrade pip
 pip install -r requirements.txt
 pip install bcolz
 ```
-Train the model for Sentiment Classification 
+Train the model for Sentiment Classification:
 
 ```bash
-python3 
+python3 mha_meme_sentiment.py
+```
+
+Train the model for affect classification:
+
+```bash
+python3 mha_meme_affect.py
 ```

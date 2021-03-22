@@ -17,6 +17,5 @@ textual segment t<sub>i</sub> separately by establishing their correspondence wi
 |:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------|
 | avengers_new-avenger-endgame-funny-memes-13.jpg |	YOU ARE BEAUTIFUL	| GO TO HELL | YOU ARE REALLY POWERFUL | GO TO HELL |	CAN YOU LEAD THE AVENGERS | REALLY? | GO TO HELL |0 |	0 |	0 |	0 |	0 |	0 |	0 |	positive |	funny	| not_sarcastic |	very_offensive |	motivational |
 
-![](Images/avengers_new-avenger-endgame-funny-memes-13.jpg)
-
+<img align="center" src="Images/avengers_new-avenger-endgame-funny-memes-13.jpg">
 

@@ -13,6 +13,10 @@ Attention for Meme Analysis), to carefully analyze the correspondence between th
 perform OCR (optical character recognition) to extract texts from the meme, and segment them into l sequence of text depending upon their spatial positions. Next, we process each
 textual segment t<sub>i</sub> separately by establishing their correspondence with the background image I. The segmented text of each meme in the training ans test set is available at [dataset/train_splitted_all_tasks.csv](dataset/train_splitted_all_tasks.csv) and [dataset/test_splitted_all_tasks.csv](dataset/test_splitted_all_tasks.csv). Example format of segmented meme text with correspondng label:
 
-| avengers_new-avenger-endgame-funny-memes-13.jpg |	YOU ARE BEAUTIFUL	GO TO HELL | YOU ARE REALLY POWERFUL | GO TO HELL |	CAN YOU LEAD THE AVENGERS | REALLY? | GO TO HELL |0 |	0 |	0 |	0 |	0 |	0 |	0 |	positive |	funny	| not_sarcastic |	very_offensive |	motivational |
-![image](https://user-images.githubusercontent.com/40575004/111927180-2f5ff280-8a86-11eb-9bcd-8856074bffb5.png)
+| Image Name | Segment #1 | Segment #2 | Segment #3 | Segment #4 | Segment #5 | Segment #6 | Segment #7 | Segment #8 | Segment #9 | Segment #10 | Segment #11 | Segment #12 | Segment #13 | Segment #14 | Sentiment | Humor | Sarcasm | Offense | Motivation |
+|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------|
+| avengers_new-avenger-endgame-funny-memes-13.jpg |	YOU ARE BEAUTIFUL	| GO TO HELL | YOU ARE REALLY POWERFUL | GO TO HELL |	CAN YOU LEAD THE AVENGERS | REALLY? | GO TO HELL |0 |	0 |	0 |	0 |	0 |	0 |	0 |	positive |	funny	| not_sarcastic |	very_offensive |	motivational |
+
+![](Images/avengers_new-avenger-endgame-funny-memes-13.jpg)
+
 

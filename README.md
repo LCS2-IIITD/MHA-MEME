@@ -22,7 +22,7 @@ textual segment t<sub>i</sub> separately by establishing their correspondence wi
 # Citation
 Please cite the following paper if you find this segmented dataset and MHA-Meme architecture useful in your research:
 
-```bash
+```
 @misc{pramanick2021exercise,
       title={Exercise? I thought you said 'Extra Fries': Leveraging Sentence Demarcations and Multi-hop Attention for Meme Affect Analysis}, 
       author={Shraman Pramanick and Md Shad Akhtar and Tanmoy Chakraborty},

@@ -40,33 +40,33 @@ Please cite the following paper if you find this segmented dataset and MHA-Meme 
 
 Clone the repository:
 
-```bash
+```
 git clone https://github.com/ShramanPramanick/MHA-Meme-Affect-Analysis.git
 cd MHA-Meme-Affect-Analysis
 ```
 
 You will need python >= 3.6. Start by creating a virtual environment to run the code in:
 
-```bash
+```
 python3 -m venv env
 source env/bin/activate
 ```
 
 Install all the requirements in the virtual environment:
 
-```bash
+```
 pip install --upgrade pip
 pip install -r requirements.txt
 pip install bcolz
 ```
 Train the model for Sentiment Classification:
 
-```bash
+```
 python3 mha_meme_sentiment.py
 ```
 
 Train the model for affect classification:
 
-```bash
+```
 python3 mha_meme_affect.py
 ```
